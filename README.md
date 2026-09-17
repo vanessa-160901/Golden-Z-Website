@@ -1,7 +1,6 @@
 # goldenzuoft.ca
 
-Source for the Golden Z @ UofT website. Plain HTML/CSS, no build step —
-hosted free on GitHub Pages.
+Source for the Golden Z @ UofT website. Plain HTML/CSS.
 
 ## Structure
 
