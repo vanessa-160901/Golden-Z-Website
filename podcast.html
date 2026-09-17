@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Built By Her — Golden Z @ UofT</title>
-<meta name="description" content="Built By Her is Golden Z's podcast featuring women building things in their fields.">
+<meta name="description" content="Built By Her is Golden Z’s podcast featuring women building things in their fields.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Golden Z home">
-      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club — University of Toronto Student Chapter">
+      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club Logo">
       <span class="logo-text">Golden Z @ University of Toronto</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
@@ -33,7 +33,6 @@
             <li><a href="team.html">Our Team</a></li>
           </ul>
         </li>
-        <!-- NEW: "What We Do" is now a dropdown -->
         <li class="has-dropdown">
           <span class="dropdown-toggle">What We Do</span>
           <ul class="dropdown-menu">
@@ -41,7 +40,7 @@
             <li><a href="events.html">Upcoming Events</a></li>
           </ul>
         </li>
-        <li><a href="podcast.html">Podcast - Built By Her</a></li>
+        <li><a href="podcast.html" aria-current="page">Podcast - Built By Her</a></li>
         <li><a href="contact.html" class="nav-cta">Get Involved</a></li>
       </ul>
     </nav>
@@ -51,9 +50,15 @@
 <main>
 
   <section class="page-header">
-    <div class="container">
-      <h1>Built By Her</h1>
-      <p>Conversations with women building things in their fields — in science, policy, business, and beyond.</p>
+    <!-- UPDATED: Flex layout to neatly put the text on the left and the new logo on the right -->
+    <div class="container" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; justify-content: space-between;">
+      <div style="flex: 1 1 400px;">
+        <h1>Built By Her</h1>
+        <p>Conversations with women building things in their fields — in science, policy, business, and beyond.</p>
+      </div>
+      <div style="flex: 0 1 250px;">
+        <img src="images/built by her logo.jpeg" alt="Built By Her Podcast Logo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,0.35);">
+      </div>
     </div>
   </section>
 
@@ -62,7 +67,7 @@
       <div class="section-head">
         <div class="rule"></div>
         <h2>About the podcast</h2>
-        <p class="wide">Built By Her is Golden Z's podcast series. Every episode sits down with a woman building something real in her field, asking how she got there and what she's learned along the way. It's produced entirely by our podcast team.</p>
+        <p class="wide">Built By Her is Golden Z’s podcast series. Every episode sits down with a woman building something real in her field, asking how she got there and what she’s learned along the way. It’s produced entirely by our podcast team.</p>
       </div>
       <div class="people-grid">
         <div class="person">
@@ -81,39 +86,19 @@
     </div>
   </section>
 
+  <!-- UPDATED: Changed to block-alt to keep the alternating background colors -->
   <section class="block block-alt">
     <div class="container">
       <div class="section-head">
         <div class="rule"></div>
-        <h2>Episodes</h2>
+        <h2>Listen &amp; Read</h2>
+        <p class="wide">Find Built By Her on Spotify, and read our latest stories on the official blog.</p>
       </div>
-      <ul class="dept-list">
-        <li class="dept-row">
-          <h3>Episode 1</h3>
-          <p>Our first episode, with guest Riyam Ojaimi.</p>
-          <!-- Replace "#" below with the real listen link once the episode is published to a platform. -->
-          <a class="dept-link" href="#">Listen</a>
-        </li>
-        <li class="dept-row">
-          <h3>More episodes</h3>
-          <p>Season 1 is underway — new episodes will be added here as they're released.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <div class="section-head">
-        <div class="rule"></div>
-        <h2>Listen</h2>
-        <p class="wide">Find Built By Her wherever you get your podcasts.</p>
-      </div>
-      <!-- Update these links once the show is live on each platform. -->
       <div class="btn-row">
-        <a class="btn btn-line" href="#">Spotify</a>
-        <a class="btn btn-line" href="#">Apple Podcasts</a>
-        <a class="btn btn-line" href="#">YouTube</a>
+        <!-- Main Gold button for Spotify -->
+        <a class="btn btn-gold" href="https://open.spotify.com/show/4xRFvr0Ijl3ASPHt1bIHW7?si=iBZRpO14RduGtLUPSmXOHw&utm_source=copy-link&nd=1&dlsi=d32378dbcef2427e" target="_blank" rel="noopener">Listen on Spotify</a>
+        <!-- Secondary Outline button for the Blog -->
+        <a class="btn btn-line" href="https://www.builtbyher.net" target="_blank" rel="noopener">Read the Blog</a>
       </div>
     </div>
   </section>
@@ -122,7 +107,7 @@
     <div class="container cta-band-inner">
       <div>
         <h2>Want to be a guest, or join the team?</h2>
-        <p>We're always looking for stories and hands to help produce them.</p>
+        <p>We’re always looking for stories and hands to help produce them.</p>
       </div>
       <a class="btn btn-line" href="contact.html">Get in touch</a>
     </div>
