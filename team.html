@@ -26,14 +26,21 @@
       </button>
       <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li class="has-dropdown dropdown-active">
+        <li class="has-dropdown">
           <span class="dropdown-toggle">About</span>
           <ul class="dropdown-menu">
             <li><a href="about.html">Our Story</a></li>
-            <li><a href="team.html" aria-current="page">Our Team</a></li>
+            <li><a href="team.html">Our Team</a></li>
           </ul>
         </li>
-        <li><a href="departments.html">What We Do</a></li>
+        <!-- NEW: "What We Do" is now a dropdown -->
+        <li class="has-dropdown">
+          <span class="dropdown-toggle">What We Do</span>
+          <ul class="dropdown-menu">
+            <li><a href="initiatives.html">Our Initiatives</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+          </ul>
+        </li>
         <li><a href="podcast.html">Podcast - Built By Her</a></li>
         <li><a href="contact.html" class="nav-cta">Get Involved</a></li>
       </ul>
