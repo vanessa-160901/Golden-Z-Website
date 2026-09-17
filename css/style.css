@@ -146,16 +146,14 @@ img { max-width: 100%; display: block; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   text-decoration: none;
   color: var(--maroon-900);
 }
 
-.logo-word {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-toggle {
@@ -213,6 +211,59 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
+/* Dropdown: hovering "About" reveals Our Story / Our Team.
+   The parent label itself is not a link — nothing happens on click. */
+.has-dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  display: inline-block;
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding-block: 0.3rem;
+  border-bottom: 2px solid transparent;
+  cursor: default;
+}
+.has-dropdown:hover .dropdown-toggle,
+.has-dropdown.dropdown-active .dropdown-toggle {
+  color: var(--maroon-900);
+  border-bottom-color: var(--gold-500);
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--parchment-2);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 28px rgba(42, 24, 16, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 50;
+}
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu li + li { margin-top: 0; }
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+  border-bottom: none;
+  font-weight: 500;
+}
+.dropdown-menu a:hover { background: var(--parchment-2); }
+
 @media (max-width: 760px) {
   .nav-toggle { display: flex; }
   .site-nav ul {
@@ -229,10 +280,28 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  .site-nav.open ul { max-height: 360px; }
+  .site-nav.open ul { max-height: 480px; }
   .site-nav ul li { border-top: 1px solid var(--parchment-2); }
   .site-nav ul li a { display: block; padding: 0.9rem var(--gutter); }
   .site-nav .nav-cta { margin: 0.9rem var(--gutter); text-align: center; }
+
+  /* On mobile there's no hover, so the dropdown is just shown inline,
+     permanently expanded under its label. */
+  .dropdown-toggle {
+    display: block;
+    padding: 0.9rem var(--gutter) 0.3rem;
+  }
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0 0 0.4rem;
+  }
+  .dropdown-menu a { padding: 0.5rem var(--gutter) 0.5rem calc(var(--gutter) + 0.8rem); }
 }
 
 /* =====================================================================
@@ -312,9 +381,18 @@ img { max-width: 100%; display: block; }
 
 .hero-figure svg { width: 100%; height: auto; max-width: 340px; }
 
+.logo-plate {
+  background: var(--parchment);
+  border-radius: 20px;
+  padding: 1.8rem 2.2rem;
+  box-shadow: 0 18px 40px rgba(20, 6, 10, 0.35);
+  display: inline-flex;
+}
+.logo-plate img { width: 100%; max-width: 300px; height: auto; display: block; }
+
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-figure { order: -1; max-width: 220px; margin-inline: auto; }
+  .hero-figure { order: -1; max-width: 280px; margin-inline: auto; }
 }
 
 /* =====================================================================
@@ -470,7 +548,14 @@ blockquote.pull cite {
 .people-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem 2.5rem;
+  gap: 2.2rem 2.5rem;
+}
+.person-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin-bottom: 0.9rem;
+  display: block;
 }
 .person h3 { font-size: 1.15rem; margin-bottom: 0.15rem; }
 .person .role {
@@ -481,6 +566,13 @@ blockquote.pull cite {
   margin-bottom: 0.5rem;
 }
 .person p { color: var(--ink-soft); margin-bottom: 0; }
+.avatar-note {
+  font-size: var(--step-neg1);
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--gold-500);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
 
 /* =====================================================================
    Alternating feature rows (departments page)
@@ -607,10 +699,18 @@ blockquote.pull cite {
 }
 .footer-brand {
   display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
+  align-items: center;
+  gap: 1rem;
   max-width: 34ch;
 }
+.footer-logo-plate {
+  background: var(--parchment);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.footer-logo-plate img { height: 46px; width: auto; display: block; }
 .footer-brand p { margin: 0; color: var(--gold-100); font-size: var(--step-neg1); }
 .footer-links {
   display: flex;
