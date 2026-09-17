@@ -197,7 +197,6 @@ img { max-width: 100%; display: block; }
   padding: 0;
 }
 
-/* UPDATED: Added display: inline-block; here so all nav links align perfectly */
 .site-nav a {
   display: inline-block;
   color: var(--ink);
@@ -245,6 +244,7 @@ img { max-width: 100%; display: block; }
   border-bottom-color: var(--gold-500);
 }
 .dropdown-menu {
+  display: block; /* UPDATED: Forces the dropdown to behave as a block rather than inheriting the row flexbox */
   position: absolute;
   top: 100%;
   left: 0;
