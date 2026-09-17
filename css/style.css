@@ -146,14 +146,28 @@ img { max-width: 100%; display: block; }
 .logo {
   display: flex;
   align-items: center;
+  gap: 0.75rem; /* UPDATED: Adds space between the logo image and the text */
   text-decoration: none;
   color: var(--maroon-900);
 }
 
 .logo-img {
-  height: 35px; /* UPDATED: Changed from 50px to make the logo smaller */
+  height: 35px;
   width: auto;
   display: block;
+}
+
+/* UPDATED: Styles the new header text next to the logo */
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--maroon-900);
+  line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+  .logo-text { font-size: 0.95rem; }
 }
 
 .nav-toggle {
@@ -211,8 +225,7 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
-/* Dropdown: hovering "About" reveals Our Story / Our Team.
-   The parent label itself is not a link — nothing happens on click. */
+/* Dropdown: hovering "About" reveals Our Story / Our Team. */
 .has-dropdown {
   position: relative;
 }
