@@ -16,11 +16,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Golden Z home">
-      <svg class="mark" width="30" height="30" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <path d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-        <rect class="accent" x="42" y="40" width="10" height="10"/>
-      </svg>
-      <span class="logo-word">Golden Z</span>
+      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club — University of Toronto Student Chapter">
     </a>
     <nav class="site-nav" aria-label="Primary">
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
@@ -29,7 +25,13 @@
       </button>
       <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <span class="dropdown-toggle">About</span>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+        </li>
         <li><a href="departments.html">What We Do</a></li>
         <li><a href="podcast.html" aria-current="page">Built By Her</a></li>
         <li><a href="contact.html" class="nav-cta">Get Involved</a></li>
@@ -123,11 +125,8 @@
 <footer class="site-footer on-dark">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <svg class="mark" width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <path d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-        <rect class="accent" x="42" y="40" width="10" height="10"/>
-      </svg>
-      <p>Golden Z at the University of Toronto<br>A Zonta International student chapter</p>
+      <span class="footer-logo-plate"><img src="images/golden-z-logo.png" alt="Golden Z Club logo"></span>
+      <p>A Zonta International student chapter at the University of Toronto</p>
     </div>
     <div class="footer-links">
       <a href="mailto:hello@goldenzuoft.ca">hello@goldenzuoft.ca</a>

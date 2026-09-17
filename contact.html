@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Involved — Golden Z @ UofT</title>
-<meta name="description" content="Get in touch with Golden Z, the University of Toronto's Zonta International student chapter.">
+<meta name="description" content="Apply to join Golden Z as a general member or exec, or reach out as a sponsor or community partner.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Golden Z home">
-      <svg class="mark" width="30" height="30" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <path d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-        <rect class="accent" x="42" y="40" width="10" height="10"/>
-      </svg>
-      <span class="logo-word">Golden Z</span>
+      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club — University of Toronto Student Chapter">
     </a>
     <nav class="site-nav" aria-label="Primary">
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
@@ -29,7 +25,13 @@
       </button>
       <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <span class="dropdown-toggle">About</span>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+        </li>
         <li><a href="departments.html">What We Do</a></li>
         <li><a href="podcast.html">Built By Her</a></li>
         <li><a href="contact.html" class="nav-cta" aria-current="page">Get Involved</a></li>
@@ -43,63 +45,43 @@
   <section class="page-header">
     <div class="container">
       <h1>Get involved</h1>
-      <p>Join a department, come to an event, or just say hello.</p>
+      <p>Join the team, or reach out as a sponsor or community partner.</p>
     </div>
   </section>
 
   <section class="block">
-    <div class="container contact-grid">
-
-      <div>
-        <h2>Send a message</h2>
-        <!--
-          This form posts to Formspree so it works on a static site with no
-          backend of your own. Create a free form at https://formspree.io,
-          then replace YOUR_FORM_ID below with the ID it gives you.
-        -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="department">Which department interests you?</label>
-            <select id="department" name="department">
-              <option value="">Not sure yet</option>
-              <option value="Advocacy & Programs">Advocacy &amp; Programs</option>
-              <option value="Partnerships & Outreach">Partnerships &amp; Outreach</option>
-              <option value="Communications">Communications</option>
-              <option value="Fundraising">Fundraising</option>
-              <option value="Built By Her">Built By Her</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold">Send message</button>
-        </form>
-        <p class="note">This form needs a free Formspree account connected before it will actually send messages — see the comment in the page source for the one line to update.</p>
+    <div class="container">
+      <div class="section-head">
+        <div class="rule"></div>
+        <h2>Join Golden Z</h2>
+        <p class="wide">Apply as a general member or for an executive position. Applications are reviewed on a rolling basis.</p>
       </div>
-
-      <div>
-        <h2>Other ways to reach us</h2>
-        <dl class="contact-info">
-          <dt>Email</dt>
-          <dd><a href="mailto:hello@goldenzuoft.ca">hello@goldenzuoft.ca</a></dd>
-          <dt>Instagram</dt>
-          <dd><a href="https://instagram.com/" target="_blank" rel="noopener">@goldenzuoft</a></dd>
-          <dt>LinkedIn</dt>
-          <dd><a href="https://linkedin.com/" target="_blank" rel="noopener">Golden Z @ UofT</a></dd>
-          <dt>Meetings</dt>
-          <dd>Meeting times are shared with members each term. Reach out and we'll send you the details.</dd>
-        </dl>
+      <!--
+        Replace these two "#" links with your real application form URLs
+        (e.g. Google Forms) once they're ready.
+      -->
+      <div class="btn-row">
+        <a class="btn btn-gold" href="#" target="_blank" rel="noopener">Apply as a General Member</a>
+        <a class="btn btn-line" href="#" target="_blank" rel="noopener">Apply for an Exec Position</a>
       </div>
+    </div>
+  </section>
 
+  <section class="block block-alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="rule"></div>
+        <h2>For sponsors &amp; community partners</h2>
+        <p class="wide">Interested in partnering with Golden Z, sponsoring an event, or collaborating on a project? We'd love to hear from you.</p>
+      </div>
+      <dl class="contact-info">
+        <dt>Email</dt>
+        <dd><a href="mailto:hello@goldenzuoft.ca">hello@goldenzuoft.ca</a></dd>
+        <dt>Instagram</dt>
+        <dd><a href="https://instagram.com/" target="_blank" rel="noopener">@goldenzuoft</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://linkedin.com/" target="_blank" rel="noopener">Golden Z @ UofT</a></dd>
+      </dl>
     </div>
   </section>
 
@@ -108,11 +90,8 @@
 <footer class="site-footer on-dark">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <svg class="mark" width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <path d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-        <rect class="accent" x="42" y="40" width="10" height="10"/>
-      </svg>
-      <p>Golden Z at the University of Toronto<br>A Zonta International student chapter</p>
+      <span class="footer-logo-plate"><img src="images/golden-z-logo.png" alt="Golden Z Club logo"></span>
+      <p>A Zonta International student chapter at the University of Toronto</p>
     </div>
     <div class="footer-links">
       <a href="mailto:hello@goldenzuoft.ca">hello@goldenzuoft.ca</a>
