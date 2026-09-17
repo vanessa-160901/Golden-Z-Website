@@ -151,7 +151,7 @@ img { max-width: 100%; display: block; }
 }
 
 .logo-img {
-  height: 50px;
+  height: 35px; /* UPDATED: Changed from 50px to make the logo smaller */
   width: auto;
   display: block;
 }
