@@ -4,19 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Initiatives — Golden Z @ UofT</title>
-<meta name="description" content="Golden Z runs hands-on initiatives throughout the year, from birthing kit drives to bake sales to care packages for local shelters.">
+<meta name="description" content="Golden Z runs hands-on initiatives throughout the year, from policy advocacy campaigns to care packages for local shelters.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Custom CSS for the Initiative Cards -->
+<style>
+  .initiative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .initiative-card {
+    background: var(--white);
+    border: 1px solid var(--parchment-2);
+    border-top: 5px solid var(--maroon-900);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(42, 24, 16, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .initiative-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(42, 24, 16, 0.08);
+  }
+  .initiative-card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+  .initiative-card p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+  }
+  .initiative-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .initiative-card ul li {
+    margin-bottom: 0.5rem;
+  }
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="/" aria-label="Golden Z home">
-      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club — University of Toronto Student Chapter">
+      <img class="logo-img" src="images/golden-z-logo.png" alt="Golden Z Club Logo">
       <span class="logo-text">Golden Z @ University of Toronto</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
@@ -56,17 +98,53 @@
     </div>
   </section>
 
+  <!-- CATEGORY 1: ADVOCACY & POLICY -->
   <section class="block">
     <div class="container">
+      <div class="section-head">
+        <div class="rule"></div>
+        <h2>Advocacy &amp; Policy</h2>
+        <p class="wide">Raising awareness, pushing for change, and educating our campus on critical issues affecting women and girls.</p>
+      </div>
 
-      <div class="feature-row">
-        <div class="feature-figure on-dark">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path class="mark" d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-            <rect class="accent" x="42" y="40" width="10" height="10"/>
-          </svg>
+      <div class="initiative-grid">
+        
+        <div class="initiative-card" style="border-top-color: var(--maroon-900);">
+          <h3>Gender Equity Campaigns</h3>
+          <p>We run awareness campaigns on campus tied to Zonta’s global focus areas.</p>
+          <ul>
+            <li>Highlight issues like gender-based violence and educational access</li>
+            <li>Engage students through interactive booths and digital advocacy</li>
+            <li>Partner with U of T faculty and student groups</li>
+          </ul>
         </div>
-        <div class="feature-copy">
+
+        <div class="initiative-card" style="border-top-color: var(--gold-600);">
+          <h3>Policy Panels &amp; Speakers</h3>
+          <p>We host professionals and academics to discuss policy, leadership, and equity.</p>
+          <ul>
+            <li>Connect students with women leading in their fields</li>
+            <li>Explore the intersection of public policy and gender</li>
+            <li>Provide networking and mentorship opportunities for members</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY 2: VOLUNTEERING & COMMUNITY SERVICE -->
+  <section class="block block-alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="rule"></div>
+        <h2>Volunteering &amp; Community Service</h2>
+        <p class="wide">Taking direct, hands-on action to support vulnerable populations in the Greater Toronto Area and beyond.</p>
+      </div>
+
+      <div class="initiative-grid">
+
+        <div class="initiative-card" style="border-top-color: var(--maroon-700);">
           <h3>Birthing Kit Drives</h3>
           <p>We assemble and donate birthing kits to support new mothers in need.</p>
           <ul>
@@ -75,34 +153,8 @@
             <li>Distributed through partner organizations</li>
           </ul>
         </div>
-      </div>
 
-      <div class="feature-row">
-        <div class="feature-figure on-dark">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path class="mark" d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-            <rect class="accent" x="42" y="40" width="10" height="10"/>
-          </svg>
-        </div>
-        <div class="feature-copy">
-          <h3>Bake Sales</h3>
-          <p>Low-key, high-turnout fundraisers held on campus throughout the term.</p>
-          <ul>
-            <li>Run by members between classes</li>
-            <li>Proceeds go toward our service projects and scholarships</li>
-            <li>A regular, easy way to get involved without a big time commitment</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature-figure on-dark">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path class="mark" d="M14 16H50M50 16L14 48M14 48H50" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
-            <rect class="accent" x="42" y="40" width="10" height="10"/>
-          </svg>
-        </div>
-        <div class="feature-copy">
+        <div class="initiative-card" style="border-top-color: var(--maroon-900);">
           <h3>Care Packages for Local Shelters</h3>
           <p>We assemble and deliver care packages to shelters across Toronto.</p>
           <ul>
@@ -111,10 +163,20 @@
             <li>Run a few times a year, with member packing nights beforehand</li>
           </ul>
         </div>
+
+        <div class="initiative-card" style="border-top-color: var(--gold-600);">
+          <h3>Bake Sales</h3>
+          <p>Low-key, high-turnout fundraisers held on campus throughout the term.</p>
+          <ul>
+            <li>Run by members between classes</li>
+            <li>Proceeds go toward our service projects and scholarships</li>
+            <li>A regular, easy way to get involved without a big time commitment</li>
+          </ul>
+        </div>
+
       </div>
-
-      <p class="wide" style="margin-top: 1rem;">These are just a few of what we’ve got going — new initiatives come up throughout the year as departments identify new needs. <a href="contact.html">Want to help run the next one?</a></p>
-
+      
+      <p class="wide" style="margin-top: 2rem;">These are just a few of what we’ve got going — new initiatives come up throughout the year as departments identify new needs. <a href="contact.html">Want to help run the next one?</a></p>
     </div>
   </section>
 
