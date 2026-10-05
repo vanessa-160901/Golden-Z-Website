@@ -162,7 +162,6 @@ img { max-width: 100%; display: block; }
   max-width: 300px;
 }
 
-/* FIXED: Shrinks and forces header text to wrap on small screens */
 @media (max-width: 600px) {
   .logo { gap: 0.5rem; }
   .logo-img { height: 30px; }
@@ -232,6 +231,9 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
+/* =====================================================================
+   NEW Dropdown Design
+   ===================================================================== */
 .has-dropdown {
   position: relative;
 }
@@ -249,23 +251,24 @@ img { max-width: 100%; display: block; }
   color: var(--maroon-900);
   border-bottom-color: var(--gold-500);
 }
+
 .dropdown-menu {
   display: block;
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 170px;
-  margin: 0;
-  padding: 0.4rem 0;
+  left: -0.8rem; /* Shifts slightly left to align text beautifully */
+  min-width: 200px;
+  margin: 0.6rem 0 0 0; /* Creates a slight floating gap below the header */
+  padding: 0.5rem;
   list-style: none;
-  background: var(--white);
-  border: 1px solid var(--parchment-2);
-  border-radius: var(--radius);
-  box-shadow: 0 12px 28px rgba(42, 24, 16, 0.14);
+  background: var(--maroon-900); /* Beautiful dark maroon background */
+  border: none;
+  border-radius: 8px; /* Slightly softer corners */
+  box-shadow: 0 16px 32px rgba(42, 24, 16, 0.15); /* Elegant deeper shadow */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px);
-  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   z-index: 50;
 }
 .has-dropdown:hover .dropdown-menu,
@@ -274,15 +277,22 @@ img { max-width: 100%; display: block; }
   visibility: visible;
   transform: translateY(0);
 }
-.dropdown-menu li + li { margin-top: 0; }
+.dropdown-menu li + li { margin-top: 0.2rem; } /* Adds a small gap between links */
+
 .dropdown-menu a {
   display: block;
   padding: 0.6rem 1rem;
   white-space: nowrap;
   border-bottom: none;
   font-weight: 500;
+  color: var(--parchment); /* Light text on dark background */
+  border-radius: 6px; /* Pill-shaped hover effect */
+  transition: background 0.15s ease, color 0.15s ease;
 }
-.dropdown-menu a:hover { background: var(--parchment-2); }
+.dropdown-menu a:hover { 
+  background: var(--maroon-800); /* Slightly lighter maroon on hover */
+  color: var(--gold-300); /* Beautiful gold text highlight */
+}
 
 @media (max-width: 760px) {
   .nav-toggle { display: flex; }
@@ -309,6 +319,7 @@ img { max-width: 100%; display: block; }
     display: block;
     padding: 0.9rem var(--gutter) 0.3rem;
   }
+  /* Reverts the dropdown to a clean, light inline menu for mobile devices */
   .dropdown-menu {
     position: static;
     opacity: 1;
@@ -318,8 +329,18 @@ img { max-width: 100%; display: block; }
     border: none;
     background: transparent;
     padding: 0 0 0.4rem;
+    margin: 0;
   }
-  .dropdown-menu a { padding: 0.5rem var(--gutter) 0.5rem calc(var(--gutter) + 0.8rem); }
+  .dropdown-menu li + li { margin-top: 0; }
+  .dropdown-menu a { 
+    padding: 0.5rem var(--gutter) 0.5rem calc(var(--gutter) + 0.8rem); 
+    color: var(--ink); 
+    border-radius: 0;
+  }
+  .dropdown-menu a:hover { 
+    background: transparent; 
+    color: var(--maroon-900); 
+  }
 }
 
 /* =====================================================================
@@ -439,7 +460,6 @@ section.block { padding-block: clamp(3rem, 6vw, 5rem); }
    Cards & Headshots (Team & Initiatives)
    ===================================================================== */
 
-/* FIXED: minmax updated with min(100%, width) to prevent mobile overflow */
 .people-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
@@ -476,7 +496,6 @@ section.block { padding-block: clamp(3rem, 6vw, 5rem); }
 
 .department-grid, .initiative-grid {
   display: grid;
-  /* FIXED: Ensures cards shrink instead of spilling off-screen on phones */
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
@@ -543,32 +562,6 @@ section.block { padding-block: clamp(3rem, 6vw, 5rem); }
   font-size: 1.3rem;
   color: var(--maroon-900);
   font-weight: 600;
-}
-
-/* =====================================================================
-   Department list (legacy format)
-   ===================================================================== */
-
-.dept-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--parchment-2);
-}
-.dept-row {
-  display: grid;
-  grid-template-columns: 2.4fr 3.6fr auto;
-  gap: 1.5rem;
-  align-items: baseline;
-  padding: 1.6rem 0;
-  border-bottom: 1px solid var(--parchment-2);
-}
-.dept-row h3 { margin: 0; font-size: 1.35rem; }
-.dept-row p { margin: 0; color: var(--ink-soft); }
-.dept-row .dept-link { white-space: nowrap; font-weight: 600; text-decoration: none; }
-
-@media (max-width: 700px) {
-  .dept-row { grid-template-columns: 1fr; gap: 0.4rem; }
 }
 
 /* =====================================================================
