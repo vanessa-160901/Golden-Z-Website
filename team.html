@@ -10,6 +10,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- NEW: Custom CSS to make headshots larger and rectangular -->
+<style>
+  .person-avatar {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px; /* Slightly rounded corners instead of a full circle */
+    margin-bottom: 1.2rem;
+  }
+</style>
+
 </head>
 <body>
 
@@ -86,37 +100,50 @@
         <div class="person">
           <img class="person-avatar" src="images/Ayesha headshot.jpg" alt="Ayesha Gupta">
           <h3>Ayesha Gupta</h3>
-          <span class="role">Co-Founder &amp; Director for Advocacy &amp; Events</span>
+          <span class="role">Co-Founder &amp; Director for Advocacy &amp; Programs</span>
         </div>
 
         <div class="person">
-          <!-- Vishwa's Placeholder -->
-          <svg class="person-avatar" viewBox="0 0 100 100" role="img" aria-label="Vishwa placeholder photo">
-            <circle cx="50" cy="50" r="50" fill="#6B1A2C"/>
-            <text x="50" y="50" dy="0.35em" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#FAF3E4">V</text>
+          <img class="person-avatar" src="images/Imane headshot.jpg" alt="Imane Baghouri">
+          <h3>Imane Baghouri</h3>
+          <span class="role">Director for Podcast</span>
+        </div>
+
+        <div class="person">
+          <!-- Lou-Anh placeholder photo -->
+          <svg class="person-avatar" viewBox="0 0 100 100" role="img" aria-label="Lou-Anh placeholder photo">
+            <!-- Adjusted the circle to a rect to match the new rectangular style -->
+            <rect width="100" height="100" rx="4" fill="#C08A1E"/>
+            <text x="50" y="50" dy="0.35em" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#3E0D18">LS</text>
           </svg>
-          <h3>Vishwa</h3>
-          <span class="role">Director, Outreach &amp; Partnerships</span>
+          <h3>Lou-Anh Sinnassamy</h3>
+          <span class="role">Director for Podcast</span>
+        </div>
+        
+        <div class="person">
+          <!-- Vishwa placeholder photo -->
+          <svg class="person-avatar" viewBox="0 0 100 100" role="img" aria-label="Vishwa placeholder photo">
+            <rect width="100" height="100" rx="4" fill="#6B1A2C"/>
+            <text x="50" y="50" dy="0.35em" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#FAF3E4">VD</text>
+          </svg>
+          <h3>Vishwa Dave</h3>
+          <span class="role">Director for Outreach &amp; Partnerships</span>
         </div>
 
         <div class="person">
-          <img class="person-avatar" src="images/Kajal headshot.jpg" alt="Kajal">
-          <h3>Kajal</h3>
-          <span class="role">Director</span>
+          <img class="person-avatar" src="images/Elim headshot.jpg" alt="Elim Yang">
+          <h3>Elim Yang</h3>
+          <span class="role">Director for Communications</span>
         </div>
 
         <div class="person">
-          <img class="person-avatar" src="images/Elim headshot.jpg" alt="Elim">
-          <h3>Elim</h3>
-          <span class="role">Director</span>
-        </div>
-
-        <div class="person">
-          <img class="person-avatar" src="images/Rachelle headshot.jpg" alt="Rachelle">
-          <h3>Rachelle</h3>
-          <span class="role">Director</span>
+          <img class="person-avatar" src="images/Rachelle headshot.jpg" alt="Rachelle Warren">
+          <h3>Rachelle Warren</h3>
+          <span class="role">Director for Fundraising</span>
         </div>
       </div>
+
+      <p class="avatar-note">Headshots coming soon for remaining members!</p>
     </div>
   </section>
 
@@ -208,8 +235,8 @@
           </svg>
         </div>
         <div class="feature-copy">
-          <h3>Built By Her</h3>
-          <p>Produces our podcast featuring women building things in their fields, from the interview to the final edit.</p>
+          <h3>Podcast - Built By Her</h3>
+          <p>Produces our podcast featuring women building things in their fields.</p>
           <p><a href="podcast.html">Visit the podcast page</a></p>
         </div>
       </div>
